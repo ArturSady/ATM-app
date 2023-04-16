@@ -9,18 +9,22 @@ AtmService atmService = new AtmService();
         System.out.print("""
                               Wybierz opcję:
                               1.Sprawdź saldo konta
-                              2.Wypłać pieniądze
-                              3.Zakończ
+                              2.Wpłać pieniądze
+                              3.Wypłać pieniądze
+                              4.Zakończ
                               """);
         int numberChoice = scanner.nextInt();
 
         if (numberChoice == 1){
             atmService.accountBalance();
             startMenu();
-        }if (numberChoice == 2){
+        }if (numberChoice == 2) {
+            atmService.paymentCash();
+            startMenu();
+        } if(numberChoice == 3){
             atmService.withdrawCash();
             startMenu();
-        }if (numberChoice == 3){
+        }if (numberChoice == 4){
             System.exit(0);
         }
 

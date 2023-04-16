@@ -1,9 +1,15 @@
 public class BankAccount {
-    public double balance = 20000;
+    public double balance = 100;
 
 //    public BankAccount(int balance) {
 //        this.balance = balance;
 //    }
+    public void add(double addSum){
+        balance = balance + addSum;
+    }
+    public void subtract(double subtractSum){
+        balance = balance - subtractSum;
+    }
 
     public double getBalance() {
         return balance;
@@ -11,8 +17,6 @@ public class BankAccount {
 
     @Override
     public String toString() {
-        return "BankAccount{" +
-                "balance=" + balance +
-                '}';
+        return balance + "PLN";
     }
 }
